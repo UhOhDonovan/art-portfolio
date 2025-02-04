@@ -1,5 +1,7 @@
-<script lang="ts">
-export default {};
+<script setup lang="ts">
+defineProps<{
+  firstProject: string;
+}>();
 </script>
 
 <template>
@@ -25,7 +27,7 @@ export default {};
         enjoying it simply for its artistic merit.
       </p>
     </div>
-    <RouterLink custom v-slot="{ navigate }" to="/project/default"
+    <RouterLink custom v-slot="{ navigate }" :to="`project/${firstProject}`"
       ><button @click="navigate" role="link">Continue</button></RouterLink
     >
   </div>
