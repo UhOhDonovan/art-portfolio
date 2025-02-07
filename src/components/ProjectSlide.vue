@@ -18,11 +18,12 @@ export default {
 
 <template>
     <div class="card">
-        {{ projects.map((value: any) => {
+        <!-- {{ projects.map((value: any) => {
             console.log(value)
             if (value.route === $route.params.name){
                 return value.name;
             }
-        }) }}
+        }) }} -->
+        Template
     </div>
 </template>
