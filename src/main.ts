@@ -12,14 +12,22 @@ import ProjectSlide from "./components/ProjectSlide.vue";
 // });
 // console.log(artProjects);
 
-const artProjects = [
-  {
+const artProjects = {
+  "default": {
     name: "Template",
     route: "default",
     reflection: "template.txt",
     image: "parchment.png",
+    next: "brainroot",
   },
-];
+  "brainroot": {
+    name: "Brainroot",
+    route: "brainroot",
+    reflection: "brainroot.txt",
+    image: "brainroot.jpeg",
+    next: "default"
+  }
+};
 
 const routes = [
   {
@@ -33,7 +41,7 @@ const routes = [
     path: "/aesthetic",
     component: Aesthetic,
     props: {
-      firstProject: artProjects[0].route,
+      firstProject: artProjects["brainroot"].route,
     },
   },
   {
