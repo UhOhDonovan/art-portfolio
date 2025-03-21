@@ -1,0 +1,7 @@
+services:
+  web:
+    container_name: art-portfolio
+    image: art-portfolio:latest
+    restart: always
+    ports:
+      - 4200:4200
